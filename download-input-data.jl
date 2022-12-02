@@ -31,7 +31,8 @@ filepath = Downloads.download(input_data_url, tempfile; progress = callback);
 println("Finished downloading input data.");
 println("Extracting contents of downloaded data.");
 outfolder = joinpath(@__DIR__); 
-mkpath(outfolder);
 InfoZIP.unzip(filepath, outfolder);
 println("Downloaded files are in ", joinpath(outfolder, "input"));
 
+# Remove tempfile.
+rm(tempfile);
