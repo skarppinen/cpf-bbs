@@ -7,7 +7,7 @@ NOTE: This repository is currently in construction and will update.
 
 ## Installation 
 
-1. Install [R](https://cran.r-project.org/mirrors.html) and run the following command:
+1. Install [R](https://cran.r-project.org/mirrors.html) and run the following command in R:
 ```
 install.packages(c("ggplot2", "dplyr", "patchwork", "latex2exp", "RColorBrewer"))
 ```
@@ -15,7 +15,7 @@ This will install all necessary R packages required by the code in this reposito
 
 2. Install [Julia](https://julialang.org/downloads/) (preferably version 1.6.x)
 3. Clone this repository. (on the command line `git clone https://github.com/skarppinen/cpf-bbs.git`, or via GUI at GitHub)
-4. Launch Julia in the root of the repository and execute:
+4. Launch Julia in the root of the repository and execute the commands:
 ```
 import Pkg;
 Pkg.activate(".");

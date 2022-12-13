@@ -1,0 +1,13 @@
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --blockfile=input/lgcpr-data/blocking-12345-cpf-metrics.jld2 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=0.015625 --nsim=25000 --burnin=1000 --backward-sampling --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=0.03125 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=0.0625 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=0.125 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=0.25 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=0.5 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=1.0 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=2.0 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=4.0 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=8.0 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=16.0 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-bbcpf-lgcpr.jl --npar=8 --blocksize=32.0 --nsim=25000 --burnin=1000 --resampling=systematic --seed=12345 --verbose

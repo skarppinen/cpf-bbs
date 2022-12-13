@@ -1,0 +1,1 @@
+julia ${BBCPF_JL_SCRIPT_FOLDER}/run-block-metrics-sys-lgcpr.jl --npar=8 --blocksizes=[0.015625,0.03125,0.0625,0.125,0.25,0.5,1.0,2.0,4.0,8.0,16.0,32.0] --nreps=50 --seed=12345 --jobid=1 --verbose
