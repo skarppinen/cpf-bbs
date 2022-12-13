@@ -4,7 +4,7 @@ using InfoZIP
 import Downloads
 
 # URL where input data can be downloaded from.
-input_data_url = "https://nextcloud.jyu.fi/index.php/s/RC3qcJe68kfqQPZ/download";
+input_data_url = "https://nextcloud.jyu.fi/index.php/s/d8WP6gGtyJaZDAM/download";
 tempfile = joinpath(@__DIR__, ".temp-input-data.zip");#tempname(); 
 
 THRESHOLD::Float64 = 0.0;

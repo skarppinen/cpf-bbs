@@ -27,7 +27,7 @@ The above downloads and installs all necessary Julia packages based on the Proje
 
 Input and simulation data are available for download from the following links: 
 
-* [Input data](https://nextcloud.jyu.fi/index.php/s/RC3qcJe68kfqQPZ/download)
+* [Input data]("https://nextcloud.jyu.fi/index.php/s/d8WP6gGtyJaZDAM/download")
 * [Simulation data](https://nextcloud.jyu.fi/index.php/s/tkWWLoPsR5iMWdD/download)
 
 The input data (179 MB) contains data (CP-RBM and CTCRW-T datasets, Corine Land Cover, blocking sequences) required to run some the experiments (see below).
@@ -45,7 +45,7 @@ Note that in some file and function names "bbcpf" ("block backward conditional p
 
 * `src/julia/lib/` contains the source code of the methods developed in the article with the exception of conditional killing resampling and conditional systematic resampling with mean partition (Algorithms 5 and 6 in the article), which may be found from the separate package [Resamplings.jl](https://github.com/skarppinen/Resamplings.jl). Note that `Resamplings` will be automatically installed if the instructions above are followed. 
 
-* `src/julia/models/` contains source code for the models appearing in the article. Note that the CTCRWP model in the article corresponds to the model named "CTCRWP_B". 
+* `src/julia/models/` contains source code for the models appearing in the article. Note that the CTCRWP model in the article corresponds to the model named "CTCRWP_B", and the CTCRW-T model to the model named "CTCRWH". 
 
 * `src/julia/scripts/` contains script files that setup and run the experiments of the paper (with adjustable settings). 
 The scripts prefixed with `run-` run a full or partial experiment. Each script prefixed with `run-` features a help menu, which describes all parameters that the script accepts. To access said menu, call `julia *SCRIPTNAME* --help`. The following list shortly summarises each script:
