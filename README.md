@@ -45,7 +45,7 @@ Note that in some file and function names "bbcpf" ("block backward conditional p
 
 * `src/julia/lib/` contains the source code of the methods developed in the article with the exception of conditional killing resampling and conditional systematic resampling with mean partition (Algorithms 5 and 6 in the article), which may be found from the separate package [Resamplings.jl](https://github.com/skarppinen/Resamplings.jl). Note that `Resamplings` will be automatically installed if the instructions above are followed. 
 
-* `src/julia/models/` contains source code for the models appearing in the article. 
+* `src/julia/models/` contains source code for the models appearing in the article. Note that the CTCRWP model in the article corresponds to the model named "CTCRWP_B". 
 
 * `src/julia/scripts/` contains script files that setup and run the experiments of the paper (with adjustable settings). 
 The scripts prefixed with `run-` run a full or partial experiment. Each script prefixed with `run-` features a help menu, which describes all parameters that the script accepts. To access said menu, call `julia *SCRIPTNAME* --help`. The following list shortly summarises each script:
@@ -73,10 +73,8 @@ the article. Note that running the code in the notebook requires that the simula
 * `src/bash/` contains so called tasklists that document the parameters with which the experiments of the
 scripts folder (see above) were run in order to produce the results of the article. The environment variable `BBCPF_JL_SCRIPT_FOLDER`
 is used to determine the location of the scripts. Note that fully executing the tasklists is computationally intensive and in practice requires
-a computing cluster. However, note that the simulation data discussed above contains the data that is generated when executing the tasklists.  
+a computing cluster. However, the simulation data discussed above contains the data that is generated when executing the tasklists.  
 
 * `src/R/r-plot-helpers.R` is an R file containing some functionality and settings for drawing figures (in the notebook above).
-
-
 
 
