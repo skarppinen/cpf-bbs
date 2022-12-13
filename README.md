@@ -13,7 +13,7 @@ install.packages(c("ggplot2", "dplyr", "patchwork", "latex2exp", "RColorBrewer")
 ```
 This will install all necessary R packages required by the code in this repository. 
 
-2. Install [Julia version 1.6.7](https://julialang.org/downloads/) 
+2. Install [Julia version 1.8.2](https://julialang.org/downloads/) 
 3. Clone this repository. (on the command line `git clone https://github.com/skarppinen/cpf-bbs.git`, or via GUI at GitHub)
 4. Launch Julia in the root of the repository and execute the commands:
 ```
