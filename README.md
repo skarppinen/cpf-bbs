@@ -27,7 +27,7 @@ The above downloads and installs all necessary Julia packages based on the Proje
 
 Input and simulation data are available for download from the following links: 
 
-* [Input data]("https://nextcloud.jyu.fi/index.php/s/d8WP6gGtyJaZDAM/download")
+* [Input data](https://nextcloud.jyu.fi/index.php/s/d8WP6gGtyJaZDAM/download)
 * [Simulation data](https://nextcloud.jyu.fi/index.php/s/tkWWLoPsR5iMWdD/download)
 
 The input data (179 MB) contains data (CP-RBM and CTCRW-T datasets, Corine Land Cover, blocking sequences) required to run some the experiments (see below).
