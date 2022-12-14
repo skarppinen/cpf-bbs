@@ -6,7 +6,8 @@ import Downloads
 println("Downloading simulation data, please wait, this might take a while..");
 
 # URL where input data can be downloaded from.
-input_data_url = "https://nextcloud.jyu.fi/index.php/s/tkWWLoPsR5iMWdD/download";
+
+input_data_url = "https://nextcloud.jyu.fi/index.php/s/TFGoKE6Ys9W56ts/download"; 
 tempfile = joinpath(@__DIR__, ".temp-simulation-experiments.zip");#tempname(); 
 
 THRESHOLD::Float64 = 0.0;
