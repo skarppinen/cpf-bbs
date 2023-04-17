@@ -65,8 +65,7 @@ The scripts prefixed with `run-` run a full or partial experiment. Each script p
 
 * The Jupyter notebook `src/julia/notebooks/simulation-experiments.ipynb` contains the code for all figures of the article. 
 The figures are visible in the notebook, and the notebook may be viewed directly on GitHub (without running any code, or cloning the project). 
-Some of the figures differ slightly from those of the article because of random number generation, but the code and conclusions are identical to
-the article. Note that running the code in the notebook requires that the simulation data has been downloaded as discussed above.
+Running the code in the notebook requires that the simulation data has been downloaded as discussed above.
 
 * `src/bash/` contains so called tasklists that document the parameters with which the experiments of the
 scripts folder (see above) were run in order to produce the results of the article. The environment variable `BBCPF_JL_SCRIPT_FOLDER`
