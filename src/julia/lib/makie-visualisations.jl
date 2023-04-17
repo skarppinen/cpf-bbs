@@ -26,7 +26,7 @@ function compare_terrain_sim_anim(d_bbcpf, d_cpfbs; #ctcrw_polysize = 0;
 
     # Basemap with changing title.
     maptitle_bbcpf = lift(i) do i
-        string("BBCPF(N = ", npar, ")",
+        string("CPF-BBS(N = ", npar, ")",
                ", blocksize = ", blocksize,
                        ", dt = ", Δ,
                        ", t = ", @sprintf "%6.5f" data.time[i]);
@@ -99,8 +99,17 @@ function compare_terrain_sim_anim(d_bbcpf, d_cpfbs; #ctcrw_polysize = 0;
 
 end
 using Colors
+
 function plot_trajectory_comparison(filepath::AbstractString,
-                                    ntraj = 250)
+                                    outfilepath::AbstractString, ntraj = 250;
+                                    resolution::NTuple{2} = (1000, 500),
+                                    markersize = 10,
+                                    linewidth = 3)
+    save_fig = if outfilepath == ""
+        false;
+    else
+        true;
+    end
 
     raster, proposal_sim, bbcpf_sim, obsx, obsy = jldopen(filepath, "r") do file
         raster = file["mapraster"];
@@ -113,14 +122,15 @@ function plot_trajectory_comparison(filepath::AbstractString,
         raster, proposal_sim, bbcpf_sim, obsx, obsy
     end
     trajcolor = colorant"rgba(0, 100, 0, 0.2)"; #"(:darkgreen, 0.2);
-    ticklabelsize = 15;
 
-    f = Figure(resolution = (1000, 500), backgroundcolor = :transparent)
+    f = Figure(resolution = resolution, fontsize = 10, backgroundcolor = :transparent)
     g = f[1, 1] = GridLayout(); # Insert grid layout.
-    axs = [Axis(g[1, i], aspect = 1.0,
-                xticklabelsize = ticklabelsize,
-                yticklabelsize = ticklabelsize) for i in 1:2]
+    axs = [Axis(g[1, i], aspect = 1) for i in 1:2]
     linkaxes!(axs[1], axs[2])
+    xlims!(axs[2], low = raster.info.bbox.xmin, high = raster.info.bbox.xmax)
+    ylims!(axs[2], low = raster.info.bbox.ymin, high = raster.info.bbox.ymax)
+    hidedecorations!(axs[1])
+    hidedecorations!(axs[2])
 
     # Plot background map.
     for i in 1:2
@@ -130,21 +140,18 @@ function plot_trajectory_comparison(filepath::AbstractString,
     end
     for i in 1:ntraj
         lines!(axs[1], map(first, proposal_sim[:, i]), map(x -> x[2], proposal_sim[:, i]),
-                              color = trajcolor, linestyle = :dash)
+                              color = trajcolor, linestyle = :dash, linewidth = linewidth)
     end
     for i in Int.(collect(1:(10000 / ntraj):10000))
         lines!(axs[2], map(first, bbcpf_sim[:, i]), map(x -> x[2], bbcpf_sim[:, i]),
-                              color = trajcolor, linestyle = :dash)
+                              color = trajcolor, linestyle = :dash, linewidth = linewidth)
     end
     for i in 1:2
-        scatter!(axs[i], obsx, obsy, color = (:cyan, 1.0), marker = :xcross, markersize = 12)
+        scatter!(axs[i], obsx, obsy, color = (:cyan, 1.0), marker = :xcross, markersize = markersize)
     end
-
-    xlims!(axs[2], low = raster.info.bbox.xmin, high = raster.info.bbox.xmax)
-    ylims!(axs[2], low = raster.info.bbox.ymin, high = raster.info.bbox.ymax)
-    hideydecorations!(axs[2]) # Hide y axis from right pane.
     colgap!(g, 0) # Set space between columns of plot.
 
-    #save(outfilepath, f);
+    save_fig && (save(outfilepath, f, pt_per_unit = 1););
     f;
 end
+
