@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/572061701.svg)](https://doi.org/10.5281/zenodo.17288780)
+
 # Source code and data accompanying the article _Conditional particle filters with bridge backward sampling_
 
 This repository contains the research source code and data behind the article 
