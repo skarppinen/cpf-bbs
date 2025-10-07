@@ -3,7 +3,7 @@
 # Source code and data accompanying the article _Conditional particle filters with bridge backward sampling_
 
 This repository contains the research source code and data behind the article 
-[Karppinen, S., Singh S. S., Vihola, M. (2022) _Conditional particle filters with bridge backward sampling_](https://arxiv.org/abs/2205.13898)
+[Karppinen, S., Singh S. S., Vihola, M. (2022) _Conditional particle filters with bridge backward sampling_](https://doi.org/10.1080/10618600.2023.2231514)
 
 ## Installation 
 
